@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "portfolio-1a4ea",
+    "prod": "portfolio-1a4ea",
+    "production": "portfolio-1a4ea"
+  }
+}

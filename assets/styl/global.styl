@@ -1,0 +1,91 @@
+@import "variables.styl"
+
+.white
+  color $white
+
+.black
+  color $black
+
+.gray
+  color $gray
+
+.error
+  color $error
+
+.theme
+  color $theme
+
+.border-white
+  border-color $white
+
+.border-black
+  border-color $black
+
+.border-gray
+  border-color $gray
+
+.border-theme
+  border-color $theme
+
+.border-none
+  border-color transparent
+
+.bg-none
+  background-color transparent
+
+.bg-white
+  background-color $white
+
+.bg-black
+  background-color $black
+
+.bg-gray
+  background-color $gray
+
+.bg-theme
+  background-color $theme
+
+*:hover.hover-white
+  background-color $white
+  color $black
+  border-color transparent
+
+*:hover.hover-black
+  background-color $black
+  color $white
+  border-color transparent
+
+*:hover.hover-gray
+  background-color $gray
+  color $white
+  border-color transparent
+
+*:hover.hover-theme
+  background-color $theme
+  color $white
+  border-color transparent
+
+*:hover.hover-lighten
+  filter: brightness(150%)
+
+*:hover.hover-darken
+  filter: brightness(50%)
+
+a.inner-link
+  &:link, &:visited
+    color $black
+a.external-link
+  color $black
+
+.image.fit-contain
+  object-fit contain
+
+body
+  font-family 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, Arial,
+    Meiryo, sans-serif
+  display flex
+  flex-direction column
+  min-height 100vh
+  overflow-x hidden
+  letter-spacing 1px
+  font-size 14px
