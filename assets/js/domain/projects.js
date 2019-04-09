@@ -4,21 +4,20 @@
 export default {
   index() {
     return Promise.resolve([
-      // @todo coming soon
-      // {
-      //   name: 'luxa',
-      //   label: 'Luxa',
-      //   url: 'https://luxa.jp',
-      //   imageSrc: {
-      //     mobile: '/images/projects/luxa.mobile.png',
-      //     pc: '/images/projects/luxa.pc.png',
-      //   },
-      //   term: '2017.6 ~ 2018.1',
-      //   skills: ['vue', 'vuex'],
-      //   tags: ['e-commerce'],
-      //   isWork: true,
-      //   description: 'サービスサイトを担当しました。',
-      // },
+      {
+        name: 'luxa',
+        label: 'Luxa',
+        url: 'https://luxa.jp',
+        imageSrc: {
+          mobile: '/images/projects/luxa.mobile.png',
+          pc: '/images/projects/luxa.pc.png',
+        },
+        term: '2018.2 ~ 2019.3',
+        skills: ['vue', 'vuex'],
+        tags: ['e-commerce'],
+        isWork: true,
+        description: 'サービスサイトを担当しました。',
+      },
       {
         name: 'mode.luxa',
         label: 'Luxa Mode',
@@ -81,7 +80,7 @@ export default {
       {
         name: 'rk-tech',
         label: '本サイト(github)',
-        url: 'https://github/webnobushi/portfolio',
+        url: 'https://github.com/webnobushi/rk-tech',
         term: '2019.2 ~ as of today',
         imageSrc: {
           pc: '/images/projects/portfolio.pc.png',
