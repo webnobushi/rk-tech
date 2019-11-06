@@ -13,21 +13,21 @@ export default {
   props: {
     load: {
       type: Array,
-      default: [],
+      default: () => []
     }
   },
 
-  data:() => ({
+  data: () => ({
     canvas: {
       chartObj: null,
       width: null,
-      height: null,
-    },
+      height: null
+    }
   }),
 
   async mounted() {
     this.canvas.width = this.$refs.load.offsetWidth
-    this.canvas.height = window.innerHeight * .5
+    this.canvas.height = window.innerHeight * 0.5
 
     // canvas の生成を待つ
     await this.$nextTick()
@@ -36,36 +36,44 @@ export default {
       type: 'horizontalBar',
       data: {
         labels: this.load.map(item => item.date),
-        datasets: [{
-          backgroundColor: this.load.map(item => colorDependRate(Math.floor(item.rate * 10))),
-          data: this.load.map(item => item.rate * 100),
-        }],
+        datasets: [
+          {
+            backgroundColor: this.load.map(item =>
+              colorDependRate(Math.floor(item.rate * 10))
+            ),
+            data: this.load.map(item => item.rate * 100)
+          }
+        ]
       },
       options: {
         legend: {
           display: false
         },
-        barPercentage: .1,
+        barPercentage: 0.1,
         scales: {
-          xAxes: [{
-            gridLines: {
-              display:false
-            },
-            ticks: {
-              min: 0,
-              max: 100,
-            },
-          }],
-          yAxes: [{
-            barPercentage: 0.5,
-            gridLines: {
-              display:false
+          xAxes: [
+            {
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                min: 0,
+                max: 100
+              }
             }
-          }]
+          ],
+          yAxes: [
+            {
+              barPercentage: 0.5,
+              gridLines: {
+                display: false
+              }
+            }
+          ]
         }
       }
     })
-  },
+  }
 }
 
 // created by http://hue360.herokuapp.com/
@@ -80,11 +88,10 @@ const colorPalette = [
   '#EDAD0B',
   '#E38692',
   '#DA6272',
-  '#C7243A',
+  '#C7243A'
 ]
 
 function colorDependRate(level) {
   return colorPalette[level]
 }
-
 </script>

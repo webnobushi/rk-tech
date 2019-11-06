@@ -2,7 +2,7 @@
   div
     Hero(
     id="hero"
-    last-update='2019.4.9',
+    last-update='2019.10.1',
     @click="$router.push({ name: 'contact' })")
 
     LayoutContainer

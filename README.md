@@ -20,3 +20,13 @@ $ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+# デプロイ方法
+
+```shell script
+yarn generate
+firebase logout
+firebase login
+firebase use portfolio-1a4ea
+firebase deploy
+```
